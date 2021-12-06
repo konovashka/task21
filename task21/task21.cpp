@@ -5,7 +5,7 @@
 using namespace std;
 int** memory(int n, int m);
 void fill(int** a, int n, int m);
-void find_last_min(int** a, int n, int m, int imin, int jmin);
+void find_last_min(int** a, int n, int m, int & imin, int & jmin);
 int sp(int** a, int n, int imin, int jmin);
 int main()
 {	
@@ -31,7 +31,7 @@ int** memory(int n, int m)
 //заполнение элементов
 void fill(int** a, int n, int m)
 {
-	printf("zapolnite massiv");
+	printf("zapolnite massiv\n");
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++)
@@ -41,7 +41,7 @@ void fill(int** a, int n, int m)
 	}
 }
 //поиск последнего минимального элемента в массиве
-void find_last_min(int** a, int n, int m,int imin,int jmin)
+void find_last_min(int** a, int n, int m,int & imin,int & jmin)
 {
 	int min=INT_MAX;
 	for (int i = 0; i < n; i++)
